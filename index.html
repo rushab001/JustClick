@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refresh-it</title>
+    <link rel="stylesheet" href="style2.css">
+    <script>
+        function addRandomImage() {
+            // Array of image file names in the "static" folder
+            var images = ["1.jpeg", "22.jpeg", "23.jpeg", "21.jpeg", "2.jpeg", "3.jpeg", "4.jpeg", "5.jpeg", "6.jpeg", "7.jpeg", "8.jpeg", "9.jpeg", "10.jpeg", "11.jpeg", "12.jpeg", "13.jpeg", "14.jpeg", "15.jpeg", "16.jpeg", "17.jpeg", "18.jpeg", "19.jpeg", "20.jpeg"];
+
+            // Select a random image from the array
+            var randomImage = images[Math.floor(Math.random() * images.length)];
+
+            // Create an image element with the selected image file
+            var img = document.createElement("img");
+            img.src = "static/" + randomImage;
+
+            // Add the image element to the "index.html" page   
+            document.body.appendChild(img);
+        }
+    </script>
+</head>
+
+<body onload="addRandomImage()">
+
+    <div id="image-container"></div>
+
+</body>
+
+</html>
